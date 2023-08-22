@@ -7,7 +7,7 @@ function Compare-Hash-file{
         if ($HashFile1.hash -ne $HashFile2.hash){
             return write-output "Les hash des deux fichiers sont differents."
         } else {
-            return write-output "Les hashs sont identiques."
+            return write-output "Les hashs des deux fichiers  sont identiques."
         }
     }
 }

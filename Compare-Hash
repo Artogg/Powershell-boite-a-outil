@@ -18,8 +18,6 @@ function Compare-Hash-Directory{
     if((Test-Path $Directory1) -and (Test-Path $Directory2)){
         $HashDirectory1=  Get-ChildItem -File -Recurse $Directory1 | ForEach-Object { Get-FileHash -Path $_.FullName }
         $HashDirectory2 =  Get-ChildItem -File -Recurse $Directory2 | ForEach-Object { Get-FileHash -Path $_.FullName }
-        $HashDirectory1
-        $HashDirectory2
         if (Compare-Object -ReferenceObject $HashDirectory1.Hash  -DifferenceObject $HashDirectory2.Hash){
             return write-output "Les hash des deux repertoires sont differents."
         } else {

@@ -16,8 +16,9 @@ function Install-KeePass{
     }
 }
 
+
 function Get-CredKeePass{
     [CmdletBinding()]
-    param([string]$KeePass,[STRING]$KeePathEntry)
-    return get-Secret -vault "$KeePass" -name "$Entry" 
+    param([string]$KeePass,[STRING]$KeePassEntry)
+    return get-Secret -vault "$KeePass" -name "$KeePassEntry" 
 }

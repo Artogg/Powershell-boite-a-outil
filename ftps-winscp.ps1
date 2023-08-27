@@ -6,7 +6,7 @@ function Timestamp{
 $speedlimit=3000
 $FichierLogsDuJour=""
 $Winscpdll=""
-# Charger l'ensemble .NET de WinSCP
+
 # La dll et le exe doivent etre au meme endroit
 Add-Type -Path $Winscpdll
 

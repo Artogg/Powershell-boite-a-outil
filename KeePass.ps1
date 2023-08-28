@@ -5,8 +5,8 @@ Installer le module KeePass pour powershell ou recuperer le mdp d'une entree du 
 function Install-KeePass{
     [CmdletBinding()]
     param([string]$KeePass,[STRING]$KeePath,[String]$KeyPath)
-    Install-Module -Name Microsoft.PowerShell.SecretManagement (les fonctionnalités)
-    Install-Module -Name Microsoft.PowerShell.SecretStore (pour garder dans un vault)
+    Install-Module -Name Microsoft.PowerShell.SecretManagement 
+    Install-Module -Name Microsoft.PowerShell.SecretStore
     Install-Module SecretManagement.KeePass
 
     Register-SecretVault -Name "$KeePass" -ModuleName "SecretManagement.Keepass" -VaultParameters @{
